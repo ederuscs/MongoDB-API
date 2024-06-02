@@ -54,6 +54,18 @@ Retorna todos os produtos armazenados
 
 Retorno: **Produto[]**
 
+## Buscar produto por ID
+
+    [GET] /api/produtos/:id
+
+|Parâmetro|Descrição|
+|--|--|
+|:id|ID do produto a ser buscado|
+
+Retorna o produto com o ID correspondente
+
+Retorno: **Produto**
+
 ## Inserindo novo produto
 
     [POST] /api/produtos
@@ -112,6 +124,9 @@ Os testes foram realizados utilizando ThunderClient no VSCode
 
 ## GET
 <img src="./resources/GET.png">
+
+## GET BY ID
+<img src="./resources/GETID.png">
 
 ## POST
 <img src="./resources/POST.png">
