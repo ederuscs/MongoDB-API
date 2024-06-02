@@ -136,3 +136,14 @@ Os testes foram realizados utilizando ThunderClient no VSCode
 
 ## DELETE
 <img src="./resources/DELETE.png">
+
+# Alunos participantes
+|Nome|RA|
+|--|--|
+|Davi Valdez Rodrigues|8145827|
+|Eder de Souza Vanzei|8154562|
+|Fernanda Brandão Pizzinatto|8149776|
+|Gabriel de Souza Bezerra|8068971|
+|Higor Rocha Pereira|8143566|
+|Julio Cesar Viana Silva|8077937|
+|Larissa Pereira Ibiapino|8143555|
