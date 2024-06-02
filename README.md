@@ -1,5 +1,5 @@
 # MongoDB API USCS
-Este projeto contém o código fonte de uma API simples escrita em NodeJS, para realizar somente o CRUD de uma collection de Produtos.
+Este projeto contém o código fonte de uma API simples escrita em NodeJS, para realizar somente o CRUD de uma collection de Produtos utilizando MongoDB.
 
 # Getting Started
 
@@ -49,7 +49,9 @@ Inicialize o servidor:
 ## Buscar todos os produtos
 
     [GET] /api/produtos
+
 Retorna todos os produtos armazenados
+
 Retorno: **Produto[]**
 
 ## Inserindo novo produto
@@ -68,6 +70,7 @@ Retorno: **Produto[]**
     }
 
 Insere um novo usuário
+
 **!!!A API não valida se o usuário existe, apenas se tem os campos obrigatórios!!!**
 
 ## Atualizando um produto
@@ -88,7 +91,9 @@ Insere um novo usuário
 |Parâmetro|Descrição|
 |--|--|
 |:id|ID do produto a ser atualizado|
+
 Atualiza um produto com base no seu id
+
 **!!!A API não valida se o usuário existe, apenas se tem os campos obrigatórios!!!**
 
 ## Deletando um produto
@@ -100,3 +105,19 @@ Atualiza um produto com base no seu id
 |:id|ID do produto a ser deletado|
 
 Deleta um produto com base no seu id
+
+# Resultado dos testes
+
+Os testes foram realizados utilizando ThunderClient no VSCode
+
+## GET
+<img src="./resources/GET.png">
+
+## POST
+<img src="./resources/POST.png">
+
+## PUT
+<img src="./resources/PUT.png">
+
+## DELETE
+<img src="./resources/DELETE.png">
