@@ -28,12 +28,12 @@ function getProdutoFormatado(produto) {
   const camposUsuario = Object.keys(produto.usuario);
 
   if (
-    !camposProdutos.includes('nome') &&
-    !camposProdutos.includes('preco') &&
-    !camposProdutos.includes('qtd_estoque') &&
-    !camposProdutos.includes('criado_em') &&
-    !camposUsuario.includes('_id') &&
-    !camposUsuario.includes('nome') &&
+    !camposProdutos.includes('nome') ||
+    !camposProdutos.includes('preco') ||
+    !camposProdutos.includes('qtd_estoque') ||
+    !camposProdutos.includes('criado_em') ||
+    !camposUsuario.includes('_id') ||
+    !camposUsuario.includes('nome') ||
     !camposUsuario.includes('email')
   )
     throw new Error('Produto inválido!')
@@ -70,6 +70,20 @@ app.get('/api/produtos', async (req, res) => {
     });
   
     res.json(produtos);
+  }
+  catch(e) {
+    res.status = 400;
+    res.json({ message: "ERROR", data: e.message });
+  }
+});
+
+app.get('/api/produtos/:id', async (req, res) => {
+  try {
+    const id = new ObjectId(req.params.id);
+    const prodCollection = getProdCollection();
+    const produto = await prodCollection.findOne({ _id: id });
+
+    res.json(produto);
   }
   catch(e) {
     res.status = 400;
